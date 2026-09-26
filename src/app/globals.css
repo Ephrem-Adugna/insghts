@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: Lato, "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, sans-serif;
+  --font-mono: Monaco, Menlo, Consolas, "Courier New", monospace;
+
+  --color-paper: #f6f3ec;
+  --color-paper-2: #efeae0;
+  --color-ink: #161513;
+  --color-ink-2: #3b3833;
+  --color-ink-3: #6b655c;
+  --color-rule: #d8d2c6;
+  --color-rule-strong: #b8b0a2;
+  --color-accent: #6b2d22;
+  --color-accent-soft: #f0e4d8;
+  --color-online: #3d6b4f;
+  --color-warn: #8a5a1d;
+
+  --color-paper-d: #121110;
+  --color-paper-2-d: #1b1a18;
+  --color-ink-d: #f3efe6;
+  --color-ink-2-d: #c8c2b6;
+  --color-ink-3-d: #8a8478;
+  --color-rule-d: #2c2a26;
+  --color-rule-strong-d: #45423b;
+  --color-accent-d: #d4b39a;
+  --color-accent-soft-d: #2a221c;
+}
+
+:root {
+  --bg: var(--color-paper);
+  --bg-raised: #fbf9f4;
+  --bg-sunken: var(--color-paper-2);
+  --fg: var(--color-ink);
+  --fg-muted: var(--color-ink-2);
+  --fg-faint: var(--color-ink-3);
+  --line: var(--color-rule);
+  --line-strong: var(--color-rule-strong);
+  --accent: var(--color-accent);
+  --accent-soft: var(--color-accent-soft);
+  --online: var(--color-online);
+  --warn: var(--color-warn);
+}
+
+.dark {
+  --bg: var(--color-paper-d);
+  --bg-raised: #171614;
+  --bg-sunken: var(--color-paper-2-d);
+  --fg: var(--color-ink-d);
+  --fg-muted: var(--color-ink-2-d);
+  --fg-faint: var(--color-ink-3-d);
+  --line: var(--color-rule-d);
+  --line-strong: var(--color-rule-strong-d);
+  --accent: var(--color-accent-d);
+  --accent-soft: var(--color-accent-soft-d);
+  --online: #7ea48a;
+  --warn: #c9a06a;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  min-height: 100vh;
+}
+
+* {
+  border-color: var(--line);
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--fg);
+}
+
+a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: -0.01em;
+}
+
+.rule {
+  border-top: 1px solid var(--line);
+}
+
+.hairline {
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.prose-research p {
+  margin: 0 0 0.75rem;
+}
+
+.prose-research p:last-child {
+  margin-bottom: 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--line-strong);
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}

@@ -1,0 +1,47 @@
+{
+  "name": "insight",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Insight — lab channels and local activity observation.",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "desktop": "concurrently -k -n insight,screenpipe,app \"next dev --turbopack\" \"node scripts/ensure-screenpipe.cjs --hold\" \"wait-on http://localhost:3000 && electron .\"",
+    "desktop:open": "electron .",
+    "screenpipe": "node scripts/ensure-screenpipe.cjs --hold",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.16.2",
+    "bcryptjs": "^3.0.3",
+    "clsx": "^2.1.1",
+    "date-fns": "^4.4.0",
+    "firebase": "^12.19.0",
+    "lucide-react": "^1.48.0",
+    "next": "^16.3.6",
+    "next-auth": "^5.0.0-beta.32",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/node": "^26.6.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "concurrently": "^10.0.5",
+    "electron": "^44.4.5",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.3.6",
+    "postcss": "^8.5.28",
+    "prisma": "^6.16.2",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "wait-on": "^9.1.0"
+  }
+}
