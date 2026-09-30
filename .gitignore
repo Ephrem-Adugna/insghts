@@ -9,3 +9,4 @@ prisma/dev.db
 prisma/dev.db-journal
 public/uploads
 data
+context/.build/

@@ -11,6 +11,8 @@
     "desktop": "concurrently -k -n insight,screenpipe,app \"next dev --turbopack\" \"node scripts/ensure-screenpipe.cjs --hold\" \"wait-on http://localhost:3000 && electron .\"",
     "desktop:open": "electron .",
     "screenpipe": "node scripts/ensure-screenpipe.cjs --hold",
+    "lately": "node context/run.mjs",
+    "test": "node --test context/*.test.mjs context/openwork/*.test.mjs",
     "lint": "eslint"
   },
   "dependencies": {
