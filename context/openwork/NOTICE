@@ -1,0 +1,12 @@
+Computer-use runtime vendored from OpenWork.
+
+Source: https://github.com/different-ai/openwork
+Path: packages/computer-use
+Commit: 03719385b4be754cd76e4a224972227d13fa4f4e
+License: MIT (see LICENSE)
+
+These files are the app-scoped macOS control helper and the small session
+client. The rest of OpenWork (cloud accounts, marketing site, enterprise
+apps) is not included.
+
+Copyright (c) 2026 Different AI
